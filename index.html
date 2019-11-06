@@ -20,7 +20,6 @@
         link.type = 'text/css';
         link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
         document.getElementsByTagName('head')[0].appendChild(link);
-
     </script>
 </head>
 
@@ -32,7 +31,7 @@
             <span class="author">DxP CI Joe</span>
         </div>
         <div class="slides">
-            <section data-markdown># Gitlab CI Pipelines</section>
+            <section data-markdown># Gitlab CI Pipelines Deep Dive DxP Session</section>
             <section>
                 <section data-markdown># Introduction</section>
                 <section data-markdown="slides/introduction/gitlab-ci-file.md"></section>
@@ -47,6 +46,8 @@
                 <section data-markdown="slides/advanced-interactions/only-except.md"></section>
                 <section data-markdown="slides/advanced-interactions/only-except-eg1.md"></section>
                 <section data-markdown="slides/advanced-interactions/only-except-eg2.md"></section>
+                <section data-markdown="slides/advanced-interactions/only-except-eg3.md"></section>
+                <section data-markdown="slides/advanced-interactions/only-except-eg4.md"></section>
                 <section data-markdown="slides/advanced-interactions/trigger.md"></section>
                 <section data-markdown="slides/advanced-interactions/trigger-eg.md"></section>
                 <section data-markdown="slides/advanced-interactions/schedules.md"></section>
@@ -67,23 +68,27 @@
         Reveal.initialize({
             width: 1200,
             history: true,
-            dependencies: [
-                { src: 'plugin/twitter/embed-tweet.js' },
-                { src: 'plugin/markdown/marked.js' },
-                { src: 'plugin/markdown/markdown.js' },
-                { src: 'plugin/notes/notes.js', async: true },
-                {
-                    src: 'plugin/highlight/highlight.js', async: true, callback: function () {
-                        hljs.initHighlightingOnLoad();
-                    }
+            dependencies: [{
+                src: 'plugin/twitter/embed-tweet.js'
+            }, {
+                src: 'plugin/markdown/marked.js'
+            }, {
+                src: 'plugin/markdown/markdown.js'
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
                 }
-            ]
+            }]
         });
 
         Reveal.configure({
             slideNumber: true
         });
-
     </script>
 </body>
 

@@ -11,7 +11,7 @@ Every jobs must be part of a stage.
 stages:
   - Say Hello
   
-deploy:
+my-first-job:
   stage: Say Hello
   script: 
     - echo "Hello DxP Noida!"

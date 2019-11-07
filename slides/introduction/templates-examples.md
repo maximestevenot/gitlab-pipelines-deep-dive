@@ -11,7 +11,7 @@ include:
     file: '/templates/.gitlab-ci-template.yml' 
 
   - project: 'my-group/my-project'
-    ref: 787123b47f14b552955ca2786bc9542ae66fee5b # Commit SHA
+    ref: '787123b47f14b552955ca2786bc9542ae66fee5b' # Commit SHA
     file: '/templates/.gitlab-ci-template.yml'
 ```
 

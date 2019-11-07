@@ -1,11 +1,24 @@
-## Example of **.gitlab-ci.yml** file:
+```yaml  
+image: maven:latest
 
-```yaml
 stages:
-  - hello
+  - build
+  - test
+  - run
 
-hello-job:
-  stage: hello
+build:
+  stage: build
   script:
-    - echo "Hello World!"
+    - mvn compile
+
+test:
+  stage: test
+  script:
+    - mvn test
+
+run:
+  stage: run
+  script:
+    - mvn package
+    - mvn exec:java -Dexec.mainClass="com.example.app.App"
 ```

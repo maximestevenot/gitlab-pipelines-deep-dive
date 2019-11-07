@@ -1,4 +1,4 @@
-## cache:key
+### cache:key
 
 Since `cache` is shared between jobs, if you’re using different paths for different jobs, you should also set a different cache:key otherwise cache content can be overwritten
 The `key` directive allows you to have a single cache for all jobs, cache per-job, cache per-branch or any other way that fits your workflow.

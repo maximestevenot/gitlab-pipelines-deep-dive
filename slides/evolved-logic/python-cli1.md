@@ -1,6 +1,6 @@
 ### The Shell Code
 
-```shell
+```bash
 function create_repository() {
     repos=$(aws ecr describe-repositories)
     export CI_REGISTRY_IMAGE=$(echo $repos | jq -r ".repositories[] | select(.repositoryName == \"$DOCKER_IMAGE_NAME\") | .repositoryUri")
